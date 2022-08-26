@@ -24,6 +24,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+// Coded by **Jeremaquai**
 //Function that tests an array of numbers that could possibly be credit card numbers and returns true if they are valid numbers and false if they are not using the Luhn algorithm
 const validateCred = arr => {
     // Set my function variables
@@ -114,6 +115,7 @@ const idInvalidCardCompanies = nestedArr => {
     return cardCompanies
 };
 
+// Check company function used in inValidCardcompanies function to keep from writing the same code over and over in the switch statement
 const checkCompaniesArray = (arr, comp) => {
     const companyCheckResult = arr.includes(comp);
     if (companyCheckResult === false) {
@@ -121,6 +123,7 @@ const checkCompaniesArray = (arr, comp) => {
     }
 };
 
+// Fuynction takes in a credit card number as a string and returns an array of that number
 const cardNumberStringToArray = (numberString) => {
     let numberArray = [];
     for (let i = 0; i < numberString.length; i++) {
@@ -130,13 +133,12 @@ const cardNumberStringToArray = (numberString) => {
     return numberArray;
 };
 
+// Function calls for testing
 
 //console.log(validateCred(valid3));
-
-const test1 = findInvalidCards(batch);
+//const test1 = findInvalidCards(batch);
 //console.log(test1);
-const idTest = idInvalidCardCompanies(test1);
-console.log(idTest);
-
-console.log(cardNumberStringToArray('1234567890'));
+//const idTest = idInvalidCardCompanies(test1);
+//console.log(idTest);
+//console.log(cardNumberStringToArray('1234567890'));
 
